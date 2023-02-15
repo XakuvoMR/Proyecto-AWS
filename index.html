@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Añadir producto | Sitio </title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+
+</head>
+<body>
+	<!-- Importación de JQUERY y JSC -->
+<script src="js/jquery.js"></script>
+<script defer src="js/valor.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+	<!--Barra de navegación-->
+    <header>
+        <div class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a href="#" class="navbar-brand">
+                    <strong>Easy Shop</strong>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarHeader">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Accesorios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link ">Chamarras</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active">Tops</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Jeans & Pantalones</a>
+                        </li>
+                    </ul>
+                    <a href="#" class="btn btn-primary" style="background-color:#BB8FCE ;">Ingresar</a>
+                    <h1>_</h1>
+                    <a href="#" class="btn btn-secondary" style="background-color:#808080 ;">Registrarse</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+<!--Titulo-->
+
+	<br>
+	<section class="titu" "col-lg-12 col-md-9 order-md-3">
+		<span style="position: absolute; top: 90 px; left: 70px;">
+		<h1>Añadir productos</h1>
+		</span>
+		<br>
+	</section>
+
+
+<!-- Registro de prendas -->
+<form action="" method="POST" id="form">
+	<div class="form">
+		<section id="scarga" class="form-register" "col-lg-12 col-md-9 order-md-3">
+			<div id="carga"  class="col-sm-12">
+
+						<p class="aviso">Especifica la siguiente información:</p>
+						<p><font color="white">Precio:</p></font>
+						<input class="controls" type="text" name="Precio" id="Precio" placeholder="Ingrese el precio">
+					
+						<p><font color="white">Talla:</p></font>
+						<input class="controls" type="text" name="Talla" id="Talla" placeholder="Ingrese las tallas">
+
+						<p><font color="white">Material:</p></font>
+						<input class="controls" type="text" name="Material" id="Material" placeholder="Especifique el Material">
+
+						<p><font color="white">Color:</p></font>
+						<input class="controls" type="text" name="Color" id="Color" placeholder="Especifique el Material">
+
+						<p><font color="white">Categoría:</p></font>
+						<input class="controls" type="text" name="Categoria" id="Categoria" placeholder="Especifique la Categoria">	
+					
+						<p><font color="white">Foto:</p></font>
+						<button class="photo" id="photo">Seleccionar foto</button>
+						<br>
+						<br>
+						<input class="botons" type="submit" name="Confirmar" value="Guardar" id="valores">
+
+						<p class="warnings" id="warnings"></p>
+
+			</div>
+		</section>
+	</div>
+</form>
+
+
+
+<script>
+	$(function(){
+			$("#cargai").hide();
+			$("#cargal").hide();
+			$("#valores").hide();
+	});
+</script>
+
+
+<!--Validación de imagenes-->
+	<div id="cargai">
+		<section id="ui" class="pre-ima">
+			<section class="col-sm-0 col-md-0 col-lg-0">
+				<br>
+				<img id="valif" src="imagenes/cheque.png" width="120" height="120">
+				<br>
+				<p><font size="4">¡Imagen cargada!</font></p>
+			</section>
+		</section>
+	</div>
+
+	<div id="cargal">
+		<section id="ui" class="pre-ima">
+			<section class="col-sm-0 col-md-0 col-lg-0">
+				<br>
+				<img id="valif" src="imagenes/cheque.png" width="120" height="120">
+				<br>
+				<p><font size="4">¡Datos cargados!</font></p>
+			</section>
+		</section>
+	</div>
+
+</body>
+</html>

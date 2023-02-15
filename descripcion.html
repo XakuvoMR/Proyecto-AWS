@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles del Producto</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+</head>
+<body onload="startTime()">
+    <!--Barra de navegación-->
+    <header>
+        <div class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a href="#" class="navbar-brand">
+                    <strong>Easy Shop</strong>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarHeader">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Accesorios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link ">Chamarras</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active">Tops</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Jeans & Pantalones</a>
+                        </li>
+                    </ul>
+                    <a href="#" class="btn btn-primary" style="background-color:#BB8FCE ;">Ingresar</a>
+                    <h1>_</h1>
+                    <a href="#" class="btn btn-secondary" style="background-color:#808080 ;">Registrarse</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="clockdate">
+        <div class="clockdate-wrapper">
+          <div id="clock"></div>
+          <div id="date"></div>
+        </div>
+      </div>
+
+
+
+
+    
+    <!--Contenido-->
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-md-12 order-md-1" style="background-color: white;">
+
+                    <img class="d-block w-100" src="imagenes/j1.jpg"alt="FOTO 1">
+
+
+                </div>
+                <div class="col-lg-1 col-cd-12 order-md-2">
+
+                </div>
+                
+                <div class="col-lg-5 col-md-9 order-md-3">
+                    <h2> Playera Casual para hombre</h2>
+                    <h2>$150.00 MN</h2>
+                    <p class="lead" style="text-align: justify;" id="parra">
+                        Esté es un pequeño ejemplo de como un producto
+                         de la tienda de ropa, podría observarse durante 
+                         la lectura de descripción del producto, además de 
+                         observar su precio en moneda Mexicana.
+                    </p>
+                    <!--se diviria el div del contendor de la descricipcion-->
+                    <div class="d-grid gap-4 col-lg-7 col-md-12 mx-auto order-md-4">
+                        <button class="btn btn-primary" type="button" 
+                        style="background-color:#BB8FCE";>Comprar ahora
+                        </button>
+                        <button class="btn btn-outline-primary" 
+                        type="button" style="background-color:#BB8FCE;" id="btn1">Leer Menos
+                        </button>
+                    </div>
+
+                    <script type="text/javascript">
+                        $(document).ready(function (){
+                            $("#btn1").click(function(){
+                                $("#parra").toggle(1000);
+                                
+                            });
+                        });
+                    </script>
+
+
+
+
+
+
+                </div>
+
+                <div class="col-lg-6 col-md-12 order-md-5" style="background-color: BLACK;" id="parra2">
+                    <h2>Sugerencia</h2>
+                    <h2>Sugerencia</h2>
+                    
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+
+    </main>
+
+    
+
+<script type="text/javascript">
+
+
+function startTime() {
+    var today = new Date();
+    var hr = today.getHours();
+    var min = today.getMinutes();
+    var sec = today.getSeconds();
+    ap = (hr < 12) ? "<span>AM</span>" : "<span>PM</span>";
+    hr = (hr == 0) ? 12 : hr;
+    hr = (hr > 12) ? hr - 12 : hr;
+    //Add a zero in front of numbers<10
+    hr = checkTime(hr);
+    min = checkTime(min);
+    sec = checkTime(sec);
+    document.getElementById("clock").innerHTML = hr + ":" + min + ":" + sec + " " + ap;
+    
+    var months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+    var days = ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado'];
+    var curWeekDay = days[today.getDay()];
+    var curDay = today.getDate();
+    var curMonth = months[today.getMonth()];
+    var curYear = today.getFullYear();
+    var date = curWeekDay+", "+curDay+" "+curMonth+" "+curYear;
+    document.getElementById("date").innerHTML = date;
+    
+    var time = setTimeout(function(){ startTime() }, 500);
+}
+function checkTime(i) {
+    if (i < 10) {
+        i = "0" + i;
+    }
+    return i;
+}
+
+
+
+</script>
+
+
+    
+</body>
+</html>

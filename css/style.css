@@ -1,0 +1,131 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.form-register {
+	width: 450px;
+	background: #212429;
+	padding: 30px;
+	margin: 70px;
+	margin-top: 50px;
+	border-radius: 6px;
+	font-family: 'Arial';
+	color: white;
+	/* box-shadow: 7px 13px 37px #000; */
+}
+
+ .pre-ima{
+	width: 300px;
+	height: 300px;
+	background: #58D68D;
+	padding: 40px;
+	padding-top: 50px;
+	margin: 100px;
+
+	margin-top: -800px; 
+	margin-left: 700px;
+	text-align: center;
+	border-radius: 200px;
+	font-family: 'Arial';
+	color: white;
+	/*box-shadow: 7px 13px 37px #000;*/
+}
+
+.controls{
+	width: 100%;
+	background: white;
+	padding: 10px;
+	border-radius: 4px;
+	margin-bottom: 16px;
+	border: 1px solid COCOCO;
+	font-family: 'Arial';
+	font-size: 18 px;
+}
+
+.aviso{
+	font-size: 16px;
+	margin-bottom: 20px;
+	color: white;
+	text-align: center;
+	font-weight: bold;
+}
+
+
+.form-register p {
+	height: 30px;
+	text-align: left;
+	font-size: 18px;
+
+}
+
+.form-register a {
+	color: white;
+	text-decoration: none;
+}
+
+.form-register a:hover {
+	color: white;
+	text-decoration: underline;
+}
+
+.form-register .botons {
+	width: 100%;
+	background: #58D68D;
+	border: none;
+	padding: 12px;
+	color: white;
+	margin: 16px 0;
+	font-size: 16px;
+}
+
+.photo {
+	width: 40%;
+	margin-left: 90px;
+	transform: translateX(+75%);
+	background: #BB8FCE;
+	border: none;
+	padding: 9px;
+	color: white;
+	margin: 0px 0;
+
+}
+
+
+
+.titu h1 {
+	height: 20px;
+	text-align: center;
+	color: black;
+	font-family: 'Arial';
+}
+
+.file-select {
+	width: 220px;
+	height: 35px;
+  position: relative;
+  display: inline-block;
+}
+
+.file-select::before {
+  background-color: #BB8FCE;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  content: 'Seleccionar foto'; /* testo por defecto */
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.file-select input[type="file"] {
+  opacity: 0;
+  width: 200px;
+  height: 32px;
+  display: inline-block;
+}
